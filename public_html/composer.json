@@ -1,0 +1,16 @@
+{
+    "name": "fmagrosoto/gsdominios",
+    "description": "Venta de Dominios de GS",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+      {
+        "name": "Fernando Magrosoto V.",
+        "email": "fmagrosoto@gmail.com"
+      }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+      "bcosca/fatfree-core": "^3.7"
+    }
+  }
