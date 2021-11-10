@@ -3,11 +3,14 @@ version: "3.7"
 services:
   servidor-php:
     build:
-      dockerfile: Dockerfile
+      dockerfile: ./docker/image/Dockerfile
       context: .
     restart: always
     volumes:
       - "./public_html/:/var/www/html"
+    configs:
+      - source: php-ini
+        target: /usr/local/etc/php/conf.d/local.ini
     ports:
       - "8080:80"
 
@@ -28,6 +31,10 @@ services:
       PMA_PASSWORD: secret
     ports:
       - "5000:80"
+
+configs:
+  php-ini:
+    file: ./docker/php/local.ini
 
 volumes:
   mysql-data:
