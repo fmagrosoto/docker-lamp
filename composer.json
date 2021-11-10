@@ -1,0 +1,19 @@
+{
+    "name": "root/app",
+    "description": "Prueba",
+    "type": "project",
+    "license": "MIT",
+    "config": {
+        "vendor-dir": "./public_html/vendor"
+      },
+    "authors": [
+        {
+            "name": "Fernando Magrosoto",
+            "email": "fmagrosoto@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "bcosca/fatfree-core": "dev-master"
+    }
+}

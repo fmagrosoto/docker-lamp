@@ -52,12 +52,25 @@ El nombre del servidor lo podrás ver desde:
 docker-compose ps
 ```
 
-Dentro de la carpeta de trabajo puedes instalar dependencias 
-usando *composer*.
+## COMPOSER ##
 
-**NOTA**: Al levantar el servidor, Docker instalará las 
-dependencias de *composer* automáticamente porque correrá el 
-*script* descrito en el archivo ```install-composer.hs``` que está dentro de la carpeta ```public_html```.
+Puedes trabajar con **Composer**, que es el gestor de dependencias de **PHP**, trabajando 
+directamente desde otro contenedor. Ejecuta la siguente sentencia:
+
+```bash
+docker run --rm -it --volume $PWD:/app composer <comandos>
+```
+
+Donde los comandos pueden ser:
+
+* install
+* init
+* requirere <dependencias>
+* outadate
+* update
+* etc
+
+Podrás ver la salida de estos comandos desde la terminal.
 
 ## LICENSE ##
 
